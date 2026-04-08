@@ -1,34 +1,44 @@
-function Header({ totalItems, onCartClick }) {
+import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+
+function Header() {
+  const { totalItems } = useCart();
+
   return (
     <header
       style={{
-        textAlign: "center",
         padding: "20px",
         background: "linear-gradient(135deg, purple, violet)",
-        color: "white",
-        position: "relative"
+        color: "white"
       }}
     >
-      <h1>QuickCart</h1>
-      <p>A Lightweight Shopping Preview</p>
+      <h1 style={{ textAlign: "center" }}>QuickCart</h1>
 
-      <button
-        onClick={onCartClick}
+      <nav
         style={{
-          position: "absolute",
-          right: "20px",
-          top: "20px",
-          padding: "10px 15px",
-          border: "none",
-          borderRadius: "8px",
-          background: "white",
-          color: "purple",
-          fontWeight: "bold",
-          cursor: "pointer"
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          marginTop: "10px",
+          flexWrap: "wrap"
         }}
       >
-        Cart ({totalItems})
-      </button>
+        <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+          Home
+        </Link>
+        <Link to="/category/Electronics" style={{ color: "white", textDecoration: "none" }}>
+          Electronics
+        </Link>
+        <Link to="/category/Accessories" style={{ color: "white", textDecoration: "none" }}>
+          Accessories
+        </Link>
+        <Link to="/category/Fashion" style={{ color: "white", textDecoration: "none" }}>
+          Fashion
+        </Link>
+        <Link to="/cart" style={{ color: "white", textDecoration: "none" }}>
+          Cart ({totalItems})
+        </Link>
+      </nav>
     </header>
   );
 }
