@@ -1,35 +1,23 @@
-<<<<<<< HEAD
 # QuickCart
 
-A lightweight shopping cart app built with React.
-
-## Features
-- Product listing using React components
-- Dynamic rendering using map()
-- Responsive grid layout
-- Clean UI design
-
-## Tech Stack
-- React (Vite)
-- JavaScript (ES6)
-- CSS
-=======# QuickCart
-
-A React-based shopping cart application built using Vite with dynamic product listing and cart functionality.
+A React-based shopping cart application built using Vite with dynamic product listing, cart functionality, routing, Context API, and localStorage persistence.
 
 ## Features
 - Product listing using React components
 - Dynamic rendering using map()
 - Responsive grid layout
 - Add to Cart functionality
-- Cart sidebar with quantity controls
+- Global cart state using Context API
+- Cart persistence using localStorage
+- Multi-page navigation with React Router
+- Category-based filtering
+- Search functionality
 - Total price calculation
-- Empty cart handling
+- Empty cart and empty search handling
 
 ## Tech Stack
 - React (Vite)
 - JavaScript (ES6)
+- React Router DOM
+- Context API
 - CSS
-# quickcart---2
-A React-based shopping cart application built using Vite with dynamic product listing and cart functionality.
->>>>>>> 85e18e32c5d5550ccd27df8c5baa63177bea6f7a
